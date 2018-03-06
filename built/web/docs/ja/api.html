@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><title>Misskey API | Misskey Docs</title><link rel="stylesheet" href="/assets/style.css"><style>svg:not(:root).svg-inline--fa {
+  overflow: visible; }
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em; }
+  .svg-inline--fa.fa-lg {
+    vertical-align: -.225em; }
+  .svg-inline--fa.fa-w-1 {
+    width: 0.0625em; }
+  .svg-inline--fa.fa-w-2 {
+    width: 0.125em; }
+  .svg-inline--fa.fa-w-3 {
+    width: 0.1875em; }
+  .svg-inline--fa.fa-w-4 {
+    width: 0.25em; }
+  .svg-inline--fa.fa-w-5 {
+    width: 0.3125em; }
+  .svg-inline--fa.fa-w-6 {
+    width: 0.375em; }
+  .svg-inline--fa.fa-w-7 {
+    width: 0.4375em; }
+  .svg-inline--fa.fa-w-8 {
+    width: 0.5em; }
+  .svg-inline--fa.fa-w-9 {
+    width: 0.5625em; }
+  .svg-inline--fa.fa-w-10 {
+    width: 0.625em; }
+  .svg-inline--fa.fa-w-11 {
+    width: 0.6875em; }
+  .svg-inline--fa.fa-w-12 {
+    width: 0.75em; }
+  .svg-inline--fa.fa-w-13 {
+    width: 0.8125em; }
+  .svg-inline--fa.fa-w-14 {
+    width: 0.875em; }
+  .svg-inline--fa.fa-w-15 {
+    width: 0.9375em; }
+  .svg-inline--fa.fa-w-16 {
+    width: 1em; }
+  .svg-inline--fa.fa-w-17 {
+    width: 1.0625em; }
+  .svg-inline--fa.fa-w-18 {
+    width: 1.125em; }
+  .svg-inline--fa.fa-w-19 {
+    width: 1.1875em; }
+  .svg-inline--fa.fa-w-20 {
+    width: 1.25em; }
+  .svg-inline--fa.fa-pull-left {
+    margin-right: .3em;
+    width: auto; }
+  .svg-inline--fa.fa-pull-right {
+    margin-left: .3em;
+    width: auto; }
+  .svg-inline--fa.fa-border {
+    height: 1.5em; }
+  .svg-inline--fa.fa-li {
+    width: 2em; }
+  .svg-inline--fa.fa-fw {
+    width: 1.25em; }
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -12.5%;
+  width: 1em; }
+  .fa-layers svg.svg-inline--fa {
+    -webkit-transform-origin: center center;
+            transform-origin: center center; }
+
+.fa-layers-text, .fa-layers-counter {
+  display: inline-block;
+  position: absolute;
+  text-align: center; }
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center; }
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: .25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right; }
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left; }
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left; }
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.fa-xs {
+  font-size: .75em; }
+
+.fa-sm {
+  font-size: .875em; }
+
+.fa-1x {
+  font-size: 1em; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-6x {
+  font-size: 6em; }
+
+.fa-7x {
+  font-size: 7em; }
+
+.fa-8x {
+  font-size: 8em; }
+
+.fa-9x {
+  font-size: 9em; }
+
+.fa-10x {
+  font-size: 10em; }
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em; }
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0; }
+  .fa-ul &gt; li {
+    position: relative; }
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit; }
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em; }
+
+.fa-pull-left {
+  float: left; }
+
+.fa-pull-right {
+  float: right; }
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: .3em; }
+
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: .3em; }
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear; }
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8); }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.fa-rotate-90 {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=1)&quot;;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.fa-rotate-180 {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=2)&quot;;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.fa-rotate-270 {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=3)&quot;;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+.fa-flip-horizontal {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)&quot;;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.fa-flip-vertical {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)&quot;;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)&quot;;
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); }
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  -webkit-filter: none;
+          filter: none; }
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2em; }
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1em; }
+
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+</style></head><body><nav><ul><li><a href="/ja/about">Misskeyについて</a></li><li><a href="/ja/api">Misskey API</a></li><li><a href="/ja/index">Misskey ドキュメント</a></li><li><a href="/ja/license">ライセンス</a></li><li><a href="/ja/mute">ミュート</a></li><li><a href="/ja/search">検索</a></li><li><a href="/ja/tou">利用規約</a></li></ul><section><h2>API</h2><ul><li>Entities<ul><li><a href="/ja/api/entities/drive-file">DriveFile</a></li><li><a href="/ja/api/entities/post">Post</a></li><li><a href="/ja/api/entities/user">User</a></li></ul></li><li>Endpoints<ul><li><a href="/ja/api/endpoints/posts/create">posts/create</a></li><li><a href="/ja/api/endpoints/posts/timeline">posts/timeline</a></li></ul></li></ul></section></nav><main><article><h1>Misskey API</h1><p>MisskeyはWeb APIを公開しており、様々な操作をプログラム上から行うことができます。</p><p>APIを自分のアカウントから利用する場合(自分のアカウントのみ操作したい場合)と、アプリケーションから利用する場合(不特定のアカウントを操作したい場合)とで利用手順が異なりますので、それぞれのケースについて説明します。</p><section><h2>自分の所有するアカウントからAPIにアクセスする場合</h2><p>「設定 > API」で、APIにアクセスするのに必要なAPIキーを取得してください。</p><p>APIにアクセスする際には、リクエストにAPIキーを「i」というパラメータ名で含めます。</p><div class="ui info warn"><p><i data-fa class="exclamation-triangle"><svg aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></i>アカウントを不正利用される可能性があるため、このトークンは第三者に教えないでください(アプリなどにも入力しないでください)。</p></div><p>APIの詳しい使用法は「Misskey APIの利用」セクションをご覧ください。</p></section><section><h2>アプリケーションからAPIにアクセスする場合</h2><p>直接ユーザーのAPIキーをアプリケーションが扱うのは危険なので、
+アプリケーションからAPIを利用する際には、アプリケーションとアプリケーションを利用するユーザーが結び付けられた専用のトークン(アクセストークン)をMisskeyに発行してもらい、
+そのトークンをリクエストのパラメータに含める必要があります。</p><div class="ui info"><p><i data-fa class="info-circle"><svg aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></i>アクセストークンは、ユーザーが自分のアカウントにあなたのアプリケーションがアクセスすることを許可した場合のみ発行されます</p></div><p>それでは、アクセストークンを取得するまでの流れを説明します。</p><section><h3>1.アプリケーションを登録する</h3><p>まず、あなたのアプリケーションやWebサービス(以後、あなたのアプリと呼びます)をMisskeyに登録します。</p><p><a href="https://dev.misskey.xyz" target="_blank">デベロッパーセンター</a>にアクセスし、「アプリ > アプリ作成」に進みます。
+フォームに必要事項を記入し、アプリを作成してください。フォームの記入欄の説明は以下の通りです:</p><table><thead><tr><th>名前</th><th>説明</th></tr></thead><tbody><tr><td>アプリケーション名</td><td>あなたのアプリの名称。</td></tr><tr><td>アプリの概要</td><td>あなたのアプリの簡単な説明や紹介。</td></tr><tr><td>コールバックURL</td><td>ユーザーが後述する認証フォームで認証を終えた際にリダイレクトするURLを設定できます。あなたのアプリがWebサービスである場合に有用です。</td></tr><tr><td>権限</td><td>あなたのアプリが要求する権限。ここで要求した機能だけがAPIからアクセスできます。</td></tr></tbody></table><p>登録が済むとあなたのアプリのシークレットキーが入手できます。このシークレットキーは後で使用します。</p><div class="ui info warn"><p><i data-fa class="exclamation-triangle"><svg aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></i>アプリに成りすまされる可能性があるため、極力このシークレットキーは公開しないようにしてください。</p></div></section><section><h3>2.ユーザーに認証させる</h3><p>あなたのアプリを使ってもらうには、ユーザーにアカウントへのアクセスの許可をもらう必要があります。</p><p>認証セッションを開始するには、https://api.misskey.xyz/auth/session/generate へパラメータに app_secret としてシークレットキーを含めたリクエストを送信します。
+リクエスト形式はJSONで、メソッドはPOSTです。
+レスポンスとして認証セッションのトークンや認証フォームのURLが取得できるので、認証フォームのURLをブラウザで表示し、ユーザーにフォームを提示してください。</p><p>あなたのアプリがコールバックURLを設定している場合、
+ユーザーがあなたのアプリの連携を許可すると設定しているコールバックURLに token という名前でセッションのトークンが含まれたクエリを付けてリダイレクトします。</p><p>あなたのアプリがコールバックURLを設定していない場合、ユーザーがあなたのアプリの連携を許可したことを(何らかの方法で(たとえばボタンを押させるなど))確認出来るようにしてください。</p></section><section><h3>3.ユーザーのアクセストークンを取得する</h3><p>ユーザーが連携を許可したら、https://api.misskey.xyz/auth/session/userkey へ次のパラメータを含むリクエストを送信します:</p><table><thead><tr><th>名前</th><th>型</th><th>説明</th></tr></thead><tbody><tr><td>app_secret</td><td>string</td><td>あなたのアプリのシークレットキー</td></tr><tr><td>token</td><td>string</td><td>セッションのトークン</td></tr></tbody></table><p>上手くいけば、認証したユーザーのアクセストークンがレスポンスとして取得できます。おめでとうございます！</p></section><p>アクセストークンが取得できたら、「ユーザーのアクセストークン+あなたのアプリのシークレットキーをsha256したもの」を「i」というパラメータでリクエストに含めると、APIにアクセスすることができます。</p><p>「i」パラメータの生成方法を擬似コードで表すと次のようになります:</p><pre><code>const i = sha256(accessToken + secretKey);</code></pre><p>APIの詳しい使用法は「Misskey APIの利用」セクションをご覧ください。</p></section><section><h2>Misskey APIの利用</h2><p>APIはすべてリクエストのパラメータ・レスポンスともにJSON形式です。また、すべてのエンドポイントはPOSTメソッドのみ受け付けます。</p><p>APIリファレンスもご確認ください。</p><section><h3>レートリミット</h3><p>Misskey APIにはレートリミットがあり、短時間のうちに多数のリクエストを送信すると、一定時間APIを利用することができなくなることがあります。</p></section></section></article><footer><p>間違いや改善点を見つけましたか？<a href="https://github.com/syuilo/misskey/tree/master/src/web/docs/api.ja.pug" target="_blank">このページをGitHubで編集</a></p><small>Copyright (c) 2014-2018 syuilo</small></footer></main></body></html>
