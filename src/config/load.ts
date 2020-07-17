@@ -20,7 +20,13 @@ const path = process.env.NODE_ENV === 'test'
 	: `${dir}/default.yml`;
 
 export default function load() {
-	const config = yaml.safeLoad(fs.readFileSync(path, 'utf-8')) as Source;
+	let configString;
+	if (typeof process.env.MISSKEY_CONFIG_HEROKU === "string") {
+		configString = Buffer.from(process.env.MISSKEY_CONFIG_HEROKU, "base64").toString("UTF-8")
+	} else {
+		configString = fs.readFileSync(path, 'utf-8')
+	}
+	const config = yaml.safeLoad(configString) as Source;
 
 	const mixin = {} as Mixin;
 
